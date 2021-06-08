@@ -107,12 +107,19 @@
 		\emph{Orca Scan} is an application created by Cambridge App Lab Limited. \emph{Orca Scan} will make the TC21 device: scan, export .csv, .xlsx to a file manager application that connects to an Server Message Block (SMB) service.
 		
 		\begin{itemize}
-			\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
-			\item Scroll down to \emph{Data Wedge} section, 'Inter character delay' is up to [10 ms]
-			\item Scroll down and select 'Basic Data formatting' section  
-			\item 'Send ENTER key' should be [\checkmark], not unchecked
+			\item Download \emph{Orca Scan v5.7.8} APK from a web browser
+			\item Be sure to accept permissions on third-party downloads
+			\item \emph{CAUTION:} downloading APK that is not from 'Google Play Store' is dangerous
+			\item Install the 'Orca Scan v5.7.8.apk' file
 		\end{itemize}
-		
+		\subsection*{\emph{Orca Scan} Versions}
+			Orca Scan App 6.2.0 Update
+			\\  2021-06-05
+			\\- Added support for Honeywell barcode scanners
+			\\- Fixed bug extracting weight from GS1 barcodes (thanks Jonas)
+			\\- Restored `Scan into field` button when manually entering a barcode
+			\\- Remove Orca yellow from light theme
+			
 	\end{scriptsize}
 %Ignore sample template
 %	\begin{scriptsize}
@@ -138,9 +145,7 @@
 	\begin{lstlisting}[caption={Snippet of the C++ to decode the bar-code}, label=lst:rcode]
 	#include <iostream>
 	#include <string.h>
-	#include <string>
-	using namespace std;
-	
+	...
 	string GetBinaryStringFromHexString(string);
 	
 	int main(int argc, char *argv[]) // input is a 32 character string
@@ -149,19 +154,13 @@
 		unsigned int encodeVer, printArea, itemCode, packingDiv, productionYear, quantity, serialNumber, checkSum;
 		string inHex, inBinary;
 		
-		
 		for (int i = 1; i < argc; ++i)
 		{
 			inHex = argv[i];
 			inBinary = GetBinaryStringFromHexString(inHex);
-			//cout << inHex << "\n";
-			//cout << inBinary << "\n";
-			
-		...
-			cout << "Serial Number: " << serialNumber << "\n";
-			cout << "Checksum: " << checkSum << "\n";
+			//cout << inHex << "\n";	
+			...
 		} 
-		
 		return 0;
 	}
 	
@@ -196,12 +195,12 @@
 	\end{lstlisting}
 \end{scriptsize}
 
-\subsection*{I. Decode Bar-Code: Visual Studio}
+\subsection*{I. Decode Bar-Code: \emph{Visual Studio}}
 \begin{scriptsize}
-	\emph{Data Wedge} is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
+	"\emph{Visual Studio} dev tools \& services make app development easy for any platform \& language."
 	
 	\begin{itemize}
-		\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
+		\item Integrated Development Environment (IDE)
 		\item Scroll down to \emph{Keystroke output} section, 'Inter character delay' is up to [10 ms]
 		\item Scroll down and select \emph{Basic Data formatting} section  
 		\item 'Send ENTER key' should be [\checkmark], not unchecked 
@@ -214,4 +213,6 @@
  
 	
 \end{scriptsize}
+
+
 \end{document}
