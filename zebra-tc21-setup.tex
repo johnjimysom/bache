@@ -16,7 +16,7 @@
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 	
 
-\newcommand{\estiloJava}{
+\newcommand{\cppTheme}{
 	\lstset{
 		language=Java,
 		basicstyle=\ttfamily\small,
@@ -132,9 +132,9 @@
 %		\end{lstlisting}
 %	\end{scriptsize}
 
-	\section{Decoding Bar-code}
+	\section{Parsing QR Bar-code}
 	\begin{scriptsize}
-	\estiloJava
+	\cppTheme
 	\begin{lstlisting}[caption={Snippet of the C++ to decode the bar-code}, label=lst:rcode]
 	#include <iostream>
 	#include <string.h>
@@ -194,5 +194,24 @@
 	}
 		
 	\end{lstlisting}
+\end{scriptsize}
+
+\subsection*{I. Decode Bar-Code: Visual Studio}
+\begin{scriptsize}
+	\emph{Data Wedge} is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
+	
+	\begin{itemize}
+		\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
+		\item Scroll down to \emph{Keystroke output} section, 'Inter character delay' is up to [10 ms]
+		\item Scroll down and select \emph{Basic Data formatting} section  
+		\item 'Send ENTER key' should be [\checkmark], not unchecked 
+	\end{itemize}
+	
+\end{scriptsize}
+\subsection*{II. Decode Bar-Code: Future Updates}
+\begin{scriptsize}
+	Future updates regarding to the parser is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
+ 
+	
 \end{scriptsize}
 \end{document}
