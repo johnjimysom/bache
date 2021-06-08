@@ -91,35 +91,108 @@
 	
 	\subsection*{\emph{Data Wedge} Application}
 		\begin{scriptsize}
-		\emph{Realis} is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
+		\emph{Data Wedge} is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
 		
 		\begin{itemize}
 			\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
-			\item Scroll down to \emph{Data Wedge} section, 'Inter character delay' is up to [10 ms]
-			\item Scroll down and select 'Basic Data formatting' section. This is a \checkmark checkmark.
-			\item Server Message Block (SMB) configuration skills 
+			\item Scroll down to \emph{Keystroke output} section, 'Inter character delay' is up to [10 ms]
+			\item Scroll down and select \emph{Basic Data formatting} section  
+			\item 'Send ENTER key' should be [\checkmark], not unchecked 
 		\end{itemize}
 		
 	\end{scriptsize}
 
 	\section{'Orca Scan' Android Package (APK)}
-	
 	\begin{scriptsize}
-		\test
-		\begin{lstlisting}[caption={Coding in R}, label=lst:rcode]
-			name = input('who are you? ')
-			hero_name= input('who is your favorite heroic servant in FGO? ')
-			print('hello ' + name + ' your favorite heroic servant is ' + hero_name)
-			
-			birth_year = input('birth year: ')
-			print(type(birth_year))
-			int(birth_year)
-			age = 2021 - int(birth_year)
-			print(type(age))
-			print(age)
-			
-		\end{lstlisting}
+		\emph{Orca Scan} is an application created by Cambridge App Lab Limited. \emph{Orca Scan} will make the TC21 device: scan, export .csv, .xlsx to a file manager application that connects to an Server Message Block (SMB) service.
+		
+		\begin{itemize}
+			\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
+			\item Scroll down to \emph{Data Wedge} section, 'Inter character delay' is up to [10 ms]
+			\item Scroll down and select 'Basic Data formatting' section  
+			\item 'Send ENTER key' should be [\checkmark], not unchecked
+		\end{itemize}
+		
 	\end{scriptsize}
+%Ignore sample template
+%	\begin{scriptsize}
+%		\test
+%		\begin{lstlisting}[caption={Coding in R}, label=lst:rcode]
+%			name = input('who are you? ')
+%			hero_name= input('who is your favorite heroic servant in FGO? ')
+%			print('hello ' + name + ' your favorite heroic servant is ' + hero_name)
+%			
+%			birth_year = input('birth year: ')
+%			print(type(birth_year))
+%			int(birth_year)
+%			age = 2021 - int(birth_year)
+%			print(type(age))
+%			print(age)
+%			
+%		\end{lstlisting}
+%	\end{scriptsize}
 
+	\section{Decoding Bar-code}
+	\begin{scriptsize}
+	\estiloJava
+	\begin{lstlisting}[caption={Snippet of the C++ to decode the bar-code}, label=lst:rcode]
+	#include <iostream>
+	#include <string.h>
+	#include <string>
+	using namespace std;
+	
+	string GetBinaryStringFromHexString(string);
+	
+	int main(int argc, char *argv[]) // input is a 32 character string
 
+	{
+		unsigned int encodeVer, printArea, itemCode, packingDiv, productionYear, quantity, serialNumber, checkSum;
+		string inHex, inBinary;
+		
+		
+		for (int i = 1; i < argc; ++i)
+		{
+			inHex = argv[i];
+			inBinary = GetBinaryStringFromHexString(inHex);
+			//cout << inHex << "\n";
+			//cout << inBinary << "\n";
+			
+		...
+			cout << "Serial Number: " << serialNumber << "\n";
+			cout << "Checksum: " << checkSum << "\n";
+		} 
+		
+		return 0;
+	}
+	
+	string GetBinaryStringFromHexString(string sHex)
+	{
+		string sReturn = "";
+		for (unsigned int i = 0; i < sHex.length(); ++i)
+		{
+			switch (toupper(sHex[i]))
+			{
+				case '0': sReturn.append("0000"); break;
+				case '1': sReturn.append("0001"); break;
+				case '2': sReturn.append("0010"); break;
+				case '3': sReturn.append("0011"); break;
+				case '4': sReturn.append("0100"); break;
+				case '5': sReturn.append("0101"); break;
+				case '6': sReturn.append("0110"); break;
+				case '7': sReturn.append("0111"); break;
+				case '8': sReturn.append("1000"); break;
+				case '9': sReturn.append("1001"); break;
+				case 'A': sReturn.append("1010"); break;
+				case 'B': sReturn.append("1011"); break;
+				case 'C': sReturn.append("1100"); break;
+				case 'D': sReturn.append("1101"); break;
+				case 'E': sReturn.append("1110"); break;
+				case 'F': sReturn.append("1111"); break;
+			}
+		}
+		return sReturn;
+	}
+		
+	\end{lstlisting}
+\end{scriptsize}
 \end{document}

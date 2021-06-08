@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.8)  8 JUN 2021 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.8)  8 JUN 2021 14:50
 entering extended mode
 **./zebra-tc21-setup.tex
 (zebra-tc21-setup.tex
@@ -546,43 +546,37 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\jimy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.st
 y
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\jimy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang2.st
-y
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\jimy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang3.st
-y
-File: lstlang3.sty 2020/03/24 1.8d listings language file
 ) [1
 
 {C:/Users/jimy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(zebra-tc21-setup.aux) ) 
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 146.
+
+[2] [3] (zebra-tc21-setup.aux) ) 
 Here is how much of TeX's memory you used:
- 15276 strings out of 479300
- 290381 string characters out of 2854042
- 846700 words of memory out of 3000000
- 32506 multiletter control sequences out of 15000+200000
- 409435 words of font info for 47 fonts, out of 3000000 for 9000
+ 14663 strings out of 479300
+ 283606 string characters out of 2854042
+ 1025660 words of memory out of 3000000
+ 31896 multiletter control sequences out of 15000+200000
+ 409900 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,6n,116p,488b,1970s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/
-enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/jimy/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jimy/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/jimy/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
-ers/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr5.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jimy/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/jimy/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0700.pfb><C:/Users/j
-imy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on zebra-tc21-setup.pdf (1 page, 125160 bytes).
+ 113i,6n,116p,488b,1814s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/jimy/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jimy/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users
+/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jimy/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jimy/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/jimy/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/jim
+y/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0700.pfb>
+Output written on zebra-tc21-setup.pdf (3 pages, 135670 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
