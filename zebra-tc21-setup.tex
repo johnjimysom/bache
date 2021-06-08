@@ -1,0 +1,125 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{xcolor}
+
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+%\definecolor{oldmauve}{rgb}{0.4, 0.19, 0.28}
+\usepackage{listings}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+	
+
+\newcommand{\estiloJava}{
+	\lstset{
+		language=Java,
+		basicstyle=\ttfamily\small,
+		keywordstyle=\color{jpurple}\bfseries,
+		stringstyle=\color{red},
+		commentstyle=\color{verde},
+		morecomment=[s][\color{blue}]{/**}{*/},
+		extendedchars=true,
+		showspaces=false,
+		showstringspaces=false,
+		numbers=left,
+		numberstyle=\tiny,
+		breaklines=true,
+		backgroundcolor=\color{cyan!10},
+		breakautoindent=true,
+		captionpos=b,
+		xleftmargin=0pt,
+		tabsize=2
+}}
+
+\newcommand{\test}{
+	\lstset{ %
+		language=R,                     % the language of the code
+		basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+		numbers=left,                   % where to put the line-numbers
+		numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+		stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+		% will be numbered
+		numbersep=5pt,                  % how far the line-numbers are from the code
+		backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+		showspaces=false,               % show spaces adding particular underscores
+		showstringspaces=false,         % underline spaces within strings
+		showtabs=false,                 % show tabs within strings adding particular underscores
+		frame=single,                   % adds a frame around the code
+		rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+		tabsize=2,                      % sets default tabsize to 2 spaces
+		captionpos=b,                   % sets the caption-position to bottom
+		breaklines=true,                % sets automatic line breaking
+		breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+		title=\lstname,                 % show the filename of files included with \lstinputlisting;
+		% also try caption instead of title
+		keywordstyle=\color{blue},      % keyword style
+		commentstyle=\color{darkgreen},   % comment style
+		stringstyle=\color{red},      % string literal style
+		escapeinside={\%*}{*)},         % if you want to add a comment within your code
+		morekeywords={*,...}          % if you want to add more keywords to the set
+}}
+
+\title{Zebra TC-21 QR Scanner Set-Up}
+\author{Johnjimy K. Som}
+
+\begin{document}
+	\maketitle
+	
+	\begin{scriptsize}%begin{abstract} (can be used here)
+		Documentation to set-up a Zebra TC21 to scan QR Barcodes in hexadecimal, store in a .csv or .xlsx file, send the files into an SMB network, and parse in decimal to determine item codes from that scanned QR code. Note: \emph{Italicized Text} means it can be seen in the Zebra Device.
+	\end{scriptsize}%\end{abstract}
+	
+	\section{Zebra TC-21 Configurations}
+	
+	\begin{scriptsize}
+	Requirements to scan QR code:
+	
+	\begin{itemize}
+		\item Zebra TC21 [Model:TC210K], Android Version 10
+		\item Scanning Application
+		\item File Explorer Application
+		\item Server Message Block (SMB) configuration skills
+	\end{itemize}
+	
+	\end{scriptsize}
+	
+	\subsection*{\emph{Data Wedge} Application}
+		\begin{scriptsize}
+		\emph{Realis} is a built in application for Zebra devices, In order to have the scanning function to perform quickly and efficiently, the following changes needs to made:
+		
+		\begin{itemize}
+			\item In the \emph{Data Wedge} application, Profile:Profile0 (default) should be selected
+			\item Scroll down to \emph{Data Wedge} section, 'Inter character delay' is up to [10 ms]
+			\item Scroll down and select 'Basic Data formatting' section. This is a \checkmark checkmark.
+			\item Server Message Block (SMB) configuration skills 
+		\end{itemize}
+		
+	\end{scriptsize}
+
+	\section{'Orca Scan' Android Package (APK)}
+	
+	\begin{scriptsize}
+		\test
+		\begin{lstlisting}[caption={Coding in R}, label=lst:rcode]
+			name = input('who are you? ')
+			hero_name= input('who is your favorite heroic servant in FGO? ')
+			print('hello ' + name + ' your favorite heroic servant is ' + hero_name)
+			
+			birth_year = input('birth year: ')
+			print(type(birth_year))
+			int(birth_year)
+			age = 2021 - int(birth_year)
+			print(type(age))
+			print(age)
+			
+		\end{lstlisting}
+	\end{scriptsize}
+
+
+\end{document}
